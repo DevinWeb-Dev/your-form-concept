@@ -1,0 +1,1162 @@
+/* =========================================
+   YOUR FORM. — BATCH 4
+   STUDIO ANALYTICS & INTELLIGENCE
+   ========================================= */
+
+.yf4-area {
+  --yf4-orange: #ff6b45;
+  --yf4-panel: #201f21;
+  --yf4-border: #3a3638;
+  --yf4-muted: #ada5a0;
+
+  display: grid;
+  gap: 28px;
+  min-width: 0;
+  width: 100%;
+  color: #f7f3ee;
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+.yf4-area *,
+.yf4-area *::before,
+.yf4-area *::after {
+  box-sizing: border-box;
+}
+
+.yf4-area button,
+.yf4-area input,
+.yf4-area select {
+  font: inherit;
+}
+
+.yf4-area button {
+  cursor: pointer;
+}
+
+.yf4-area button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.yf4-area :focus-visible {
+  outline: 2px solid var(--yf4-orange);
+  outline-offset: 3px;
+}
+
+/* NAVIGATION */
+
+.yf4-subnavigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 17px;
+  flex-wrap: wrap;
+
+  padding-bottom: 19px;
+  border-bottom: 1px solid var(--yf4-border);
+}
+
+.yf4-subnav-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #ffa180;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+}
+
+.yf4-subnavigation nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.yf4-tab {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 10px 13px;
+
+  border: 1px solid transparent;
+
+  color: #b9afa8 !important;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.yf4-tab:hover {
+  color: #fff !important;
+  background: #302829;
+}
+
+.yf4-tab.is-active {
+  background: #422c26;
+  border-color: #87513d;
+  color: #ffa888 !important;
+}
+
+/* PAGE HEADINGS */
+
+.yf4-page {
+  display: grid;
+  gap: 24px;
+  min-width: 0;
+}
+
+.yf4-heading {
+  padding: 7px 0;
+}
+
+.yf4-eyebrow {
+  display: block;
+
+  color: #ff9d7a;
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+  line-height: 1.5;
+}
+
+.yf4-heading h1 {
+  margin: 13px 0 19px;
+
+  font-family:
+    "Barlow Condensed",
+    Impact,
+    sans-serif;
+
+  font-size: clamp(3.7rem, 6.8vw, 7.9rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 0.84;
+}
+
+.yf4-heading h1 em {
+  color: var(--yf4-orange);
+  font-style: normal;
+}
+
+.yf4-heading > p {
+  max-width: 670px;
+  margin: 0;
+
+  color: #b9aea7;
+  font-size: 0.86rem;
+  line-height: 1.8;
+}
+
+/* METRIC CARDS */
+
+.yf4-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.yf4-metric {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 169px;
+  padding: 21px;
+
+  border: 1px solid var(--yf4-border);
+  background: var(--yf4-panel);
+}
+
+.yf4-metric.is-featured {
+  border-color: #c36a4f;
+  background: linear-gradient(
+    135deg,
+    #482c25,
+    #242021
+  );
+}
+
+.yf4-metric-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  color: #bcb1a9;
+}
+
+.yf4-metric-top span {
+  font-size: 0.61rem;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  line-height: 1.5;
+}
+
+.yf4-metric-top svg {
+  color: #ff9470;
+  flex: none;
+}
+
+.yf4-metric > strong {
+  margin: 26px 0 10px;
+
+  font-family:
+    "Barlow Condensed",
+    Impact,
+    sans-serif;
+
+  font-size: clamp(2.6rem, 3.4vw, 4.3rem);
+  font-weight: 900;
+  line-height: 0.95;
+  overflow-wrap: anywhere;
+}
+
+.yf4-metric > p {
+  margin: auto 0 0;
+
+  color: #a79e98;
+  font-size: 0.67rem;
+  line-height: 1.5;
+}
+
+/* PANELS */
+
+.yf4-two-columns,
+.yf4-report-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+  align-items: start;
+}
+
+.yf4-report-grid {
+  grid-template-columns:
+    minmax(0, 1.2fr)
+    minmax(0, 0.8fr);
+}
+
+.yf4-panel {
+  min-width: 0;
+  padding: 24px;
+
+  border: 1px solid var(--yf4-border);
+  background: var(--yf4-panel);
+}
+
+.yf4-panel-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+
+  margin-bottom: 25px;
+}
+
+.yf4-panel-heading h2 {
+  margin: 8px 0 0;
+
+  font-family:
+    "Barlow Condensed",
+    Impact,
+    sans-serif;
+
+  font-size: clamp(1.8rem, 2.4vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.yf4-label {
+  color: #afa49d;
+  font-size: 0.61rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.yf4-muted-note {
+  margin: 18px 0 0;
+
+  color: #a9a09a;
+  font-size: 0.71rem;
+  line-height: 1.8;
+}
+
+.yf4-empty {
+  color: #a69c97;
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+/* BOOKINGS BAR CHART */
+
+.yf4-booking-chart {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(63px, 1fr));
+  gap: 10px;
+
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.yf4-chart-day {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.yf4-chart-column {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  width: 100%;
+  height: 174px;
+  padding: 12px 6px 0;
+
+  border-bottom: 1px solid #61504b;
+  background: #292628;
+}
+
+.yf4-chart-column > span {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+
+  width: min(100%, 43px);
+  background: linear-gradient(
+    180deg,
+    #ffb18a,
+    #ff6b45
+  );
+
+  color: #201818;
+  font-size: 0.69rem;
+  font-weight: 900;
+}
+
+.yf4-chart-day > b {
+  margin-top: 7px;
+  font-size: 0.65rem;
+  white-space: nowrap;
+}
+
+.yf4-chart-day > small {
+  color: #948b84;
+  font-size: 0.58rem;
+  white-space: nowrap;
+}
+
+/* ATTENDANCE DONUT */
+
+.yf4-attendance-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.yf4-attendance-ring {
+  display: grid;
+  place-items: center;
+
+  flex: none;
+  width: 195px;
+  height: 195px;
+  padding: 17px;
+
+  border-radius: 50%;
+
+  background: conic-gradient(
+    #ff7954 var(--rate),
+    #393335 var(--rate)
+  );
+}
+
+.yf4-attendance-ring > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 7px;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50%;
+  background: #201f21;
+}
+
+.yf4-attendance-ring strong {
+  font-family:
+    "Barlow Condensed",
+    Impact,
+    sans-serif;
+
+  font-size: 3.8rem;
+  line-height: 1;
+}
+
+.yf4-attendance-ring small {
+  color: #b2a6a0;
+  font-size: 0.6rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.yf4-attendance-stats {
+  display: grid;
+  gap: 16px;
+
+  flex: 1 1 140px;
+}
+
+.yf4-attendance-stats > div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #bdb3ad;
+  font-size: 0.73rem;
+}
+
+.yf4-attendance-stats span {
+  width: 10px;
+  height: 10px;
+  flex: none;
+}
+
+.yf4-attendance-stats .is-green {
+  background: #92d3aa;
+}
+
+.yf4-attendance-stats .is-red {
+  background: #e58a8a;
+}
+
+.yf4-attendance-stats .is-grey {
+  background: #817b79;
+}
+
+.yf4-attendance-stats b {
+  margin-left: auto;
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* HORIZONTAL BARS */
+
+.yf4-bars {
+  display: grid;
+  gap: 23px;
+}
+
+.yf4-data-bar {
+  display: grid;
+  gap: 9px;
+}
+
+.yf4-data-bar-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.yf4-data-bar-heading > span {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+}
+
+.yf4-data-bar-heading small {
+  color: #ff9171;
+
+  font-family:
+    "Barlow Condensed",
+    Impact,
+    sans-serif;
+
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.yf4-data-bar-heading b {
+  font-size: 0.79rem;
+  overflow-wrap: anywhere;
+}
+
+.yf4-data-bar-heading strong {
+  color: #ff9b7a;
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.yf4-bar-track {
+  width: 100%;
+  height: 9px;
+  overflow: hidden;
+
+  background: #3c3639;
+}
+
+.yf4-bar-track > span {
+  display: block;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    #a74e38,
+    #ff7954
+  );
+}
+
+.yf4-data-bar > small {
+  color: #a69b95;
+  font-size: 0.67rem;
+}
+
+/* OPERATIONS STATS */
+
+.yf4-stat-list {
+  display: grid;
+}
+
+.yf4-stat-list > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+
+  min-height: 61px;
+  padding: 12px 0;
+
+  border-top: 1px solid #3d383a;
+}
+
+.yf4-stat-list span {
+  color: #b8aca5;
+  font-size: 0.73rem;
+  line-height: 1.5;
+}
+
+.yf4-stat-list strong {
+  font-family:
+    "Barlow Condensed",
+    Impact,
+    sans-serif;
+
+  font-size: 1.9rem;
+  text-align: right;
+}
+
+.yf4-stat-list strong.is-text {
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
+.yf4-space-top {
+  margin-top: 25px;
+}
+
+/* MEMBERSHIP INPUTS */
+
+.yf4-plan-list {
+  display: grid;
+}
+
+.yf4-plan-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+
+  padding: 16px 0;
+
+  border-top: 1px solid #3d3739;
+}
+
+.yf4-plan-field > span {
+  display: grid;
+  gap: 6px;
+}
+
+.yf4-plan-field strong {
+  font-size: 0.8rem;
+}
+
+.yf4-plan-field small {
+  color: #aaa09a;
+  font-size: 0.7rem;
+}
+
+.yf4-plan-field input {
+  width: 106px;
+  min-height: 44px;
+  padding: 10px;
+
+  border: 1px solid #67534a;
+  border-radius: 0;
+
+  background: #141415;
+  color: #fff;
+  text-align: right;
+}
+
+.yf4-finance-fields {
+  display: grid;
+  gap: 16px;
+
+  margin-top: 24px;
+}
+
+.yf4-finance-fields label,
+.yf4-report-fields label {
+  display: grid;
+  gap: 9px;
+  min-width: 0;
+}
+
+.yf4-finance-fields label > span,
+.yf4-report-fields label > span {
+  color: #bfb2aa;
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+}
+
+.yf4-finance-fields input,
+.yf4-report-fields input,
+.yf4-report-fields select {
+  display: block;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 47px;
+  padding: 12px 13px;
+
+  border: 1px solid #51474a;
+  border-radius: 0;
+
+  background: #151516;
+  color: #f7f3ef;
+
+  color-scheme: dark;
+  font-size: 0.8rem;
+}
+
+.yf4-finance-fields input:focus,
+.yf4-report-fields input:focus,
+.yf4-report-fields select:focus,
+.yf4-plan-field input:focus {
+  border-color: #ff926f;
+}
+
+.yf4-quiet-button {
+  border: 0;
+  padding: 9px 3px;
+
+  color: #ff9e7d;
+  background: transparent;
+
+  font-size: 0.72rem !important;
+  font-weight: 900 !important;
+}
+
+.yf4-quiet-button:hover {
+  text-decoration: underline;
+}
+
+/* FORECAST */
+
+.yf4-forecast {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(75px, 1fr));
+  gap: 14px;
+
+  overflow-x: auto;
+  width: 100%;
+}
+
+.yf4-forecast-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 7px;
+
+  min-width: 0;
+}
+
+.yf4-forecast-track {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  width: 100%;
+  height: 235px;
+  padding: 0 9px;
+
+  border-bottom: 1px solid #775044;
+  background: linear-gradient(
+    180deg,
+    #292628,
+    #211f21
+  );
+}
+
+.yf4-forecast-track > span {
+  display: block;
+  width: min(100%, 55px);
+
+  background: linear-gradient(
+    180deg,
+    #ffad86,
+    #ff6742
+  );
+}
+
+.yf4-forecast-item b {
+  margin-top: 8px;
+  font-size: 0.75rem;
+}
+
+.yf4-forecast-item small {
+  color: #c7b9af;
+  font-size: 0.65rem;
+  white-space: nowrap;
+}
+
+/* COACH INSIGHTS */
+
+.yf4-coach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.yf4-coach-card {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  padding: 22px;
+
+  border: 1px solid #4b3c38;
+  background: linear-gradient(
+    135deg,
+    #302522,
+    #201f21 65%
+  );
+}
+
+.yf4-coach-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: #ff9b7b;
+  font-size: 0.64rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.yf4-coach-avatar {
+  display: grid;
+  place-items: center;
+
+  width: 62px;
+  height: 62px;
+  margin: 27px 0 18px;
+
+  border: 1px solid #a55e48;
+  background: #4b2f27;
+  color: #ffb392;
+
+  font-family:
+    "Barlow Condensed",
+    Impact,
+    sans-serif;
+
+  font-size: 1.9rem;
+  font-weight: 900;
+}
+
+.yf4-coach-card h3 {
+  margin: 0 0 7px;
+
+  font-family:
+    "Barlow Condensed",
+    Impact,
+    sans-serif;
+
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.yf4-coach-card > p {
+  margin: 0 0 22px;
+
+  color: #aaa09a;
+  font-size: 0.67rem;
+}
+
+.yf4-coach-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+
+  margin-top: auto;
+
+  background: #423b3a;
+  border: 1px solid #423b3a;
+}
+
+.yf4-coach-details > div {
+  display: grid;
+  gap: 7px;
+
+  min-width: 0;
+  padding: 15px;
+  background: #292526;
+}
+
+.yf4-coach-details span {
+  color: #afa39c;
+  font-size: 0.6rem;
+  font-weight: 900;
+}
+
+.yf4-coach-details b {
+  font-family:
+    "Barlow Condensed",
+    Impact,
+    sans-serif;
+  font-size: 2rem;
+}
+
+/* REPORT CENTER */
+
+.yf4-report-fields {
+  display: grid;
+  gap: 17px;
+}
+
+.yf4-report-actions {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  flex-wrap: wrap;
+
+  margin-top: 25px;
+}
+
+.yf4-download-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 47px;
+  padding: 13px 18px;
+
+  border: 1px solid #ff754c;
+  background: #ff6b45;
+  color: #191616;
+
+  font-size: 0.71rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.07em;
+}
+
+.yf4-download-button:hover:not(:disabled) {
+  background: #ff9a79;
+}
+
+.yf4-success {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin: 17px 0 0;
+  color: #a6ddb6;
+  font-size: 0.73rem;
+}
+
+.yf4-error {
+  color: #ffaaa4;
+  font-size: 0.73rem;
+}
+
+.yf4-report-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+
+  padding: 13px 0;
+}
+
+.yf4-report-summary > svg {
+  color: #ff9f7e;
+}
+
+.yf4-report-summary > strong {
+  margin-top: 12px;
+
+  font-family:
+    "Barlow Condensed",
+    Impact,
+    sans-serif;
+
+  font-size: clamp(5rem, 7vw, 8rem);
+  font-weight: 900;
+  line-height: 0.9;
+}
+
+.yf4-report-summary > span {
+  color: #afa29b;
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.yf4-report-summary > p {
+  margin: 14px 0 0;
+  color: #ffad8c;
+  font-size: 0.79rem;
+}
+
+.yf4-table-scroll {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.yf4-table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.yf4-table thead {
+  background: #332824;
+}
+
+.yf4-table th {
+  padding: 14px;
+  border-bottom: 1px solid #7e4b38;
+
+  color: #ffb090;
+  font-size: 0.63rem;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  white-space: nowrap;
+}
+
+.yf4-table td {
+  padding: 14px;
+
+  border-bottom: 1px solid #3d3739;
+
+  color: #d1c5bd;
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+
+.yf4-table tbody tr:hover {
+  background: #2b2628;
+}
+
+.yf4-report-empty {
+  display: grid;
+  justify-items: start;
+  gap: 12px;
+
+  padding: 30px 0;
+}
+
+.yf4-report-empty svg {
+  color: #ff9d7d;
+}
+
+.yf4-report-empty strong {
+  font-size: 0.9rem;
+}
+
+.yf4-report-empty p {
+  margin: 0;
+  max-width: 430px;
+
+  color: #aaa09a;
+  font-size: 0.75rem;
+  line-height: 1.75;
+}
+
+/* NOTICES */
+
+.yf4-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  padding: 18px 20px;
+
+  border: 1px solid #66483e;
+  background: #302521;
+}
+
+.yf4-notice svg {
+  flex: none;
+  color: #ffac8b;
+}
+
+.yf4-notice p {
+  margin: 0;
+
+  color: #c8b9ae;
+  font-size: 0.74rem;
+  line-height: 1.8;
+}
+
+.yf4-notice strong {
+  color: #ffe1d0;
+}
+
+/* TABLET */
+
+@media (max-width: 1300px) {
+  .yf4-metric-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .yf4-coach-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1100px) {
+  .yf4-two-columns,
+  .yf4-report-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .yf4-area {
+    gap: 20px;
+  }
+
+  .yf4-page {
+    gap: 18px;
+  }
+
+  .yf4-subnavigation nav {
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 5px;
+  }
+
+  .yf4-tab {
+    flex: none;
+  }
+
+  .yf4-heading h1 {
+    font-size: clamp(
+      3.6rem,
+      11.5vw,
+      5.6rem
+    );
+  }
+
+  .yf4-panel {
+    padding: 18px;
+  }
+
+  .yf4-metric-grid {
+    gap: 9px;
+  }
+
+  .yf4-metric {
+    min-height: 149px;
+    padding: 15px;
+  }
+
+  .yf4-metric > strong {
+    font-size: clamp(
+      2.1rem,
+      6vw,
+      3.1rem
+    );
+  }
+
+  .yf4-attendance-ring {
+    width: 170px;
+    height: 170px;
+  }
+
+  .yf4-attendance-ring strong {
+    font-size: 3.2rem;
+  }
+
+  .yf4-forecast {
+    grid-template-columns:
+      repeat(6, minmax(94px, 1fr));
+  }
+
+  .yf4-coach-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 420px) {
+  .yf4-metric-top span {
+    font-size: 0.55rem;
+  }
+
+  .yf4-metric > strong {
+    font-size: 1.95rem;
+  }
+
+  .yf4-metric > p {
+    font-size: 0.61rem;
+  }
+
+  .yf4-attendance-stats {
+    flex-basis: 100%;
+  }
+
+  .yf4-plan-field input {
+    width: 87px;
+  }
+
+  .yf4-report-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .yf4-download-button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .yf4-area *,
+  .yf4-area *::before,
+  .yf4-area *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

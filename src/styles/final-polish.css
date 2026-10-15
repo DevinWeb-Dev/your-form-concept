@@ -1,0 +1,700 @@
+/* ============================================
+   YOUR FORM. — BATCH 5
+   FINAL POLISH / ACCESSIBILITY / SETTINGS
+   ============================================ */
+
+:root {
+  --yf5-orange: #ff6b45;
+  --yf5-background: #171719;
+  --yf5-panel: #211f20;
+  --yf5-border: #423c3b;
+}
+
+/* ============================================
+   GLOBAL SAFETY
+   ============================================ */
+
+html {
+  scroll-padding-top: 90px;
+  overflow-x: clip;
+}
+
+body,
+#root {
+  min-width: 0;
+  max-width: 100%;
+}
+
+:where(.yf-app, .yf3-shell) img {
+  max-width: 100%;
+}
+
+:where(
+  .yf-app,
+  .yf3-shell
+) :is(
+  button,
+  a,
+  input,
+  textarea,
+  select
+):focus-visible {
+  outline: 2px solid #ff956f;
+  outline-offset: 3px;
+}
+
+:where(
+  .yf-app,
+  .yf3-shell
+) :is(
+  button,
+  a
+) {
+  -webkit-tap-highlight-color:
+    transparent;
+}
+
+/* ============================================
+   SKIP LINK
+   ============================================ */
+
+.yf5-skip-link {
+  position: fixed;
+  z-index: 9999;
+
+  left: 16px;
+  top: 14px;
+
+  padding: 12px 17px;
+
+  border: 2px solid #fff;
+  background: var(--yf5-orange);
+  color: #171717;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 0.82rem;
+  font-weight: 900;
+
+  transform: translateY(-180%);
+}
+
+.yf5-skip-link:focus-visible {
+  transform: translateY(0);
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+
+/* ============================================
+   SCREEN READER ROUTE STATUS
+   ============================================ */
+
+.yf5-screen-reader-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* ============================================
+   BACK TO TOP
+   ============================================ */
+
+.yf5-back-to-top {
+  position: fixed;
+  z-index: 95;
+
+  right: 21px;
+  bottom: 22px;
+
+  display: grid;
+  place-items: center;
+
+  width: 47px;
+  height: 47px;
+
+  border: 1px solid #ff9b79;
+  border-radius: 0;
+
+  background: #292123;
+  color: #ffae8d;
+
+  box-shadow:
+    0 12px 35px #00000066;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.yf5-back-to-top:hover {
+  background: #482d27;
+  transform: translateY(-3px);
+}
+
+/* ============================================
+   SETTINGS PAGE
+   ============================================ */
+
+.yf5-settings-page {
+  display: grid;
+  gap: 24px;
+
+  min-width: 0;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+}
+
+.yf5-settings-page *,
+.yf5-settings-page *::before,
+.yf5-settings-page *::after {
+  box-sizing: border-box;
+}
+
+.yf5-settings-page button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.yf5-settings-page button:focus-visible {
+  outline: 2px solid #ff9b79;
+  outline-offset: 3px;
+}
+
+/* ============================================
+   PAGE HEADING
+   ============================================ */
+
+.yf5-settings-heading {
+  padding: 8px 0 12px;
+}
+
+.yf5-eyebrow {
+  display: block;
+
+  color: #ff9573;
+
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+}
+
+.yf5-settings-heading h1 {
+  margin: 14px 0 19px;
+
+  font-family:
+    "Barlow Condensed",
+    Impact,
+    sans-serif;
+
+  font-size: clamp(
+    3.8rem,
+    6.5vw,
+    7.5rem
+  );
+
+  line-height: 0.84;
+  letter-spacing: -0.025em;
+  font-weight: 900;
+}
+
+.yf5-settings-heading h1 em {
+  color: var(--yf5-orange);
+  font-style: normal;
+}
+
+.yf5-settings-heading p {
+  max-width: 660px;
+  margin: 0;
+
+  color: #b9afaa;
+  font-size: 0.87rem;
+  line-height: 1.85;
+}
+
+/* ============================================
+   SETTINGS METRICS
+   ============================================ */
+
+.yf5-settings-stats {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.yf5-settings-stats > div {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+
+  min-width: 0;
+  padding: 21px;
+
+  background: var(--yf5-panel);
+  border: 1px solid var(--yf5-border);
+}
+
+.yf5-settings-stats span {
+  color: #b9afa9;
+
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+}
+
+.yf5-settings-stats strong {
+  color: #f8f3ee;
+
+  font-family:
+    "Barlow Condensed",
+    Impact,
+    sans-serif;
+
+  font-size: clamp(
+    3rem,
+    4.6vw,
+    5rem
+  );
+
+  line-height: 0.9;
+}
+
+/* ============================================
+   SETTINGS PANELS
+   ============================================ */
+
+.yf5-settings-panel {
+  min-width: 0;
+  padding: 26px;
+
+  border: 1px solid var(--yf5-border);
+  background: var(--yf5-panel);
+}
+
+.yf5-settings-panel-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.yf5-settings-panel-head > svg {
+  color: var(--yf5-orange);
+}
+
+.yf5-settings-panel-head h2 {
+  margin: 8px 0 0;
+
+  font-family:
+    "Barlow Condensed",
+    Impact,
+    sans-serif;
+
+  font-size: clamp(
+    2rem,
+    3vw,
+    3rem
+  );
+
+  line-height: 0.95;
+}
+
+.yf5-settings-panel > p {
+  max-width: 780px;
+  margin: 18px 0;
+
+  color: #b6aaa4;
+  font-size: 0.79rem;
+  line-height: 1.8;
+}
+
+/* ============================================
+   SNAPSHOT EXPORT
+   ============================================ */
+
+.yf5-snapshot-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+
+  margin-top: 22px;
+  padding: 21px;
+
+  border: 1px solid #574039;
+  background: #322420;
+}
+
+.yf5-snapshot-stat {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.yf5-snapshot-stat strong {
+  color: #ffad8c;
+
+  font-family:
+    "Barlow Condensed",
+    Impact,
+    sans-serif;
+
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+.yf5-snapshot-stat span {
+  max-width: 190px;
+
+  color: #c9b8ad;
+  font-size: 0.73rem;
+  line-height: 1.5;
+}
+
+.yf5-primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 47px;
+  padding: 13px 18px;
+
+  border: 1px solid #ff7e57;
+  background: var(--yf5-orange);
+  color: #181616;
+
+  font-size: 0.73rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.04em;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.yf5-primary-button:hover {
+  background: #ff9c7a;
+  transform: translateY(-2px);
+}
+
+.yf5-settings-message {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 12px 15px;
+
+  background: #253c2e;
+  color: #b2e7c3 !important;
+
+  font-size: 0.73rem;
+}
+
+.yf5-settings-tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+
+  margin-top: 18px;
+  padding: 15px;
+
+  border: 1px solid #53473f;
+  background: #2a2624;
+
+  color: #b7aba4;
+
+  font-size: 0.74rem;
+  line-height: 1.75;
+}
+
+.yf5-settings-tip svg {
+  flex: none;
+  color: #ffaf90;
+}
+
+/* ============================================
+   MODULE RESET CARDS
+   ============================================ */
+
+.yf5-reset-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 13px;
+  margin-top: 22px;
+}
+
+.yf5-reset-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  min-width: 0;
+  min-height: 225px;
+  padding: 21px;
+
+  border: 1px solid #514544;
+  background: #292527;
+}
+
+.yf5-reset-icon {
+  display: grid;
+  place-items: center;
+
+  width: 43px;
+  height: 43px;
+
+  margin-bottom: 18px;
+
+  background: #492f29;
+  color: #ffa786;
+}
+
+.yf5-reset-card h3 {
+  margin: 0 0 10px;
+
+  font-family:
+    "Barlow Condensed",
+    Impact,
+    sans-serif;
+
+  font-size: 1.8rem;
+  line-height: 1.05;
+}
+
+.yf5-reset-card p {
+  margin: 0 0 20px;
+
+  color: #ada29c;
+  font-size: 0.72rem;
+  line-height: 1.7;
+}
+
+.yf5-reset-card button {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-top: auto;
+  padding: 8px 0;
+
+  border: 0;
+  background: transparent;
+
+  color: #ffb39a;
+  font-size: 0.72rem !important;
+  font-weight: 900 !important;
+}
+
+.yf5-reset-card button:hover {
+  color: #fff;
+}
+
+/* ============================================
+   FULL RESET
+   ============================================ */
+
+.yf5-danger-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 23px;
+  flex-wrap: wrap;
+
+  padding: 23px;
+
+  border: 1px solid #9b494a;
+  background: #352324;
+}
+
+.yf5-danger-intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+
+  flex: 1 1 340px;
+}
+
+.yf5-danger-intro > svg {
+  flex: none;
+  color: #ffa0a0;
+}
+
+.yf5-danger-intro h2 {
+  margin: 0 0 9px;
+
+  font-family:
+    "Barlow Condensed",
+    Impact,
+    sans-serif;
+
+  font-size: 2rem;
+}
+
+.yf5-danger-intro p {
+  max-width: 570px;
+  margin: 0;
+
+  color: #d2b5b5;
+  font-size: 0.74rem;
+  line-height: 1.8;
+}
+
+.yf5-danger-panel > button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 46px;
+  padding: 12px 16px;
+
+  border: 1px solid #d67979;
+  background: #542b2c;
+  color: #ffd7d7;
+
+  font-size: 0.72rem !important;
+  font-weight: 900 !important;
+}
+
+.yf5-danger-panel > button:hover {
+  background: #713738;
+}
+
+.yf5-disclaimer {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  padding: 17px 20px;
+
+  border: 1px solid #56413a;
+  background: #29221f;
+}
+
+.yf5-disclaimer svg {
+  flex: none;
+  color: #ffa685;
+}
+
+.yf5-disclaimer p {
+  margin: 0;
+
+  color: #bfb0a8;
+  font-size: 0.73rem;
+  line-height: 1.8;
+}
+
+.yf5-disclaimer strong {
+  color: #ffe0cf;
+}
+
+/* ============================================
+   MOBILE & TABLET FINISHING
+   ============================================ */
+
+@media (max-width: 1100px) {
+  .yf5-settings-stats {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .yf5-settings-page {
+    gap: 18px;
+  }
+
+  .yf5-settings-heading h1 {
+    font-size: clamp(
+      3.8rem,
+      12vw,
+      5.4rem
+    );
+  }
+
+  .yf5-settings-panel {
+    padding: 18px;
+  }
+
+  .yf5-reset-grid {
+    grid-template-columns:
+      minmax(0, 1fr);
+  }
+
+  .yf5-reset-card {
+    min-height: 185px;
+  }
+
+  .yf5-snapshot-row {
+    padding: 15px;
+  }
+
+  .yf5-snapshot-row
+  .yf5-primary-button {
+    width: 100%;
+  }
+
+  .yf5-back-to-top {
+    right: 12px;
+    bottom: 12px;
+
+    width: 43px;
+    height: 43px;
+  }
+}
+
+@media (max-width: 420px) {
+  .yf5-settings-stats {
+    gap: 9px;
+  }
+
+  .yf5-settings-stats > div {
+    padding: 14px;
+  }
+
+  .yf5-settings-stats strong {
+    font-size: 3.1rem;
+  }
+
+  .yf5-settings-stats span {
+    font-size: 0.56rem;
+  }
+
+  .yf5-danger-panel {
+    padding: 18px;
+  }
+
+  .yf5-danger-panel > button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  .yf5-back-to-top,
+  .yf5-primary-button {
+    transition: none !important;
+  }
+}

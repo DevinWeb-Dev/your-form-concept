@@ -1,0 +1,2395 @@
+/* =========================================
+   YOUR FORM. — BATCH 1
+   FULL WEBSITE EXPERIENCE
+   ========================================= */
+
+/* TOP STRIP AND NAVIGATION */
+
+.yf-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px max(36px, calc((100% - 1480px) / 2));
+  background: var(--yf-orange);
+  color: #221a18;
+  font-size: 0.59rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.yf-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #171719f4;
+  border-bottom: 1px solid #ffffff1c;
+  backdrop-filter: blur(20px);
+}
+
+.yf-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  min-height: 89px;
+}
+
+.yf-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  white-space: nowrap;
+}
+
+.yf-logo > span:last-child {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: 1.95rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.yf-logo > span:last-child span {
+  color: var(--yf-orange);
+}
+
+.yf-logo-mark {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  background: var(--yf-orange);
+  color: #171719;
+  transform: rotate(-8deg);
+}
+
+.yf-logo-mark svg {
+  transform: rotate(8deg);
+}
+
+.yf-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 2vw, 29px);
+}
+
+.yf-nav a {
+  position: relative;
+  padding: 12px 0;
+  color: #b8b3ae;
+  font-size: 0.74rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.yf-nav a:hover,
+.yf-nav a.is-active {
+  color: #fff;
+}
+
+.yf-nav a.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 100%;
+  height: 2px;
+  background: var(--yf-orange);
+}
+
+.yf-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.yf-header-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 19px;
+  background: var(--yf-orange);
+  color: #161616;
+  font-size: 0.72rem;
+  font-weight: 800;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.yf-header-cta:hover {
+  background: #ffa182;
+}
+
+.yf-menu-toggle {
+  display: none;
+  place-items: center;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #ffffff3b;
+  background: #ffffff0b;
+  color: white;
+}
+
+/* HOMEPAGE HERO */
+
+.yf-hero {
+  position: relative;
+  min-height: min(850px, 86vh);
+  overflow: hidden;
+  isolation: isolate;
+  background: #171719;
+  color: white;
+}
+
+.yf-hero-image,
+.yf-hero-shade {
+  position: absolute;
+  inset: 0;
+}
+
+.yf-hero-image {
+  z-index: -3;
+}
+
+.yf-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60% 38%;
+  filter: grayscale(30%) contrast(1.16) brightness(0.67);
+}
+
+.yf-hero-shade {
+  z-index: -2;
+  background:
+    linear-gradient(
+      90deg,
+      #171719fa 0%,
+      #171719d9 38%,
+      #17171952 74%,
+      #17171928
+    ),
+    linear-gradient(
+      0deg,
+      #171719 0%,
+      transparent 35%
+    );
+}
+
+.yf-hero-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 770px;
+  padding-block: 75px 105px;
+}
+
+.yf-hero-flag {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  padding: 12px 15px;
+  border: 1px solid #ffffff48;
+  color: #e7dbd0;
+  font-size: 0.63rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.yf-pulse-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--yf-orange);
+  box-shadow: 0 0 0 5px #ff6b4527;
+}
+
+.yf-hero h1 {
+  margin: 32px 0 24px;
+  font: 900 clamp(7.5rem, 15vw, 17rem) / 0.65
+    "Barlow Condensed", Impact, sans-serif;
+  letter-spacing: -0.055em;
+}
+
+.yf-hero h1 > span {
+  font-weight: 500;
+  color: #efebe7;
+}
+
+.yf-hero h1 em {
+  font-weight: 900;
+  color: var(--yf-orange);
+}
+
+.yf-hero-content > p {
+  max-width: 470px;
+  margin: 15px 0 0;
+  color: #c2bdb9;
+  font-size: 0.9rem;
+  line-height: 1.9;
+}
+
+.yf-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 29px;
+}
+
+.yf-hero-signature {
+  display: flex;
+  gap: 30px;
+  margin-top: 60px;
+  color: #99928e;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.yf-hero-edge {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px max(36px, calc((100% - 1480px) / 2));
+  border-top: 1px solid #ffffff35;
+  color: #bcb2aa;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+}
+
+.yf-hero-edge span:first-child {
+  color: var(--yf-orange);
+}
+
+/* MARQUEE */
+
+.yf-marquee {
+  overflow: hidden;
+  padding: 23px 0;
+  background: var(--yf-orange);
+  color: #191919;
+}
+
+.yf-marquee > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 24px;
+  min-width: 1150px;
+}
+
+.yf-marquee span {
+  font: 800 2.3rem / 1
+    "Barlow Condensed", Impact, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.yf-marquee svg {
+  flex-shrink: 0;
+}
+
+/* HOME — PHILOSOPHY */
+
+.yf-method-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 35px;
+}
+
+.yf-method-lead {
+  position: relative;
+  min-height: 650px;
+  overflow: hidden;
+  background: #252525;
+  color: white;
+}
+
+.yf-method-lead img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.48) contrast(1.15);
+  transition: transform 0.7s ease;
+}
+
+.yf-method-lead:hover img {
+  transform: scale(1.05);
+}
+
+.yf-method-lead > div {
+  position: absolute;
+  z-index: 1;
+  inset: auto 0 0;
+  padding: clamp(25px, 4vw, 55px);
+  background: linear-gradient(transparent, #101010d1);
+}
+
+.yf-method-lead h3 {
+  margin: 22px 0 0;
+  font: 800 clamp(4.9rem, 7vw, 8.7rem) / 0.8
+    "Barlow Condensed", Impact, sans-serif;
+}
+
+.yf-method-lead h3 em {
+  color: var(--yf-orange);
+}
+
+.yf-method-points {
+  display: grid;
+  align-content: stretch;
+}
+
+.yf-method-points article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  padding: 28px 35px;
+  border-bottom: 1px solid var(--yf-line);
+}
+
+.yf-method-points article:first-child {
+  border-top: 1px solid var(--yf-line);
+}
+
+.yf-method-points svg {
+  color: var(--yf-orange);
+}
+
+.yf-method-points article > span {
+  color: #b07560;
+  font-size: 0.63rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.yf-method-points h3 {
+  margin: 0;
+  font: 800 2.8rem / 0.88
+    "Barlow Condensed", Impact, sans-serif;
+}
+
+.yf-method-points p {
+  max-width: 380px;
+  margin: 0;
+  color: #827b75;
+  font-size: 0.78rem;
+  line-height: 1.8;
+}
+
+/* PROGRAM CARDS */
+
+.yf-program-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 21px;
+}
+
+.yf-program-card {
+  min-width: 0;
+  background: #f8f6f1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.yf-program-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 23px 40px #1f1c1a18;
+}
+
+.yf-program-photo {
+  position: relative;
+  height: clamp(260px, 29vw, 410px);
+  overflow: hidden;
+  background: #312d2b;
+}
+
+.yf-program-photo::after {
+  content: "";
+  position: absolute;
+  inset: 50% 0 0;
+  background: linear-gradient(
+    transparent,
+    #0f0e0eaa
+  );
+  pointer-events: none;
+}
+
+.yf-program-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(40%) contrast(1.06);
+  transition: transform 0.65s ease, filter 0.65s ease;
+}
+
+.yf-program-card:hover .yf-program-photo img {
+  transform: scale(1.075);
+  filter: grayscale(0%) contrast(1.07);
+}
+
+.yf-program-photo > span {
+  position: absolute;
+  z-index: 1;
+  left: 22px;
+  bottom: 19px;
+  color: white;
+  font-size: 0.69rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.yf-program-photo > a {
+  position: absolute;
+  z-index: 2;
+  top: 19px;
+  right: 19px;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  background: var(--yf-orange);
+  color: #181818;
+}
+
+.yf-program-details {
+  padding: 27px 27px 29px;
+}
+
+.yf-program-details h3 {
+  margin: 19px 0 13px;
+  font: 800 clamp(2.9rem, 4vw, 4.5rem) / 0.86
+    "Barlow Condensed", Impact, sans-serif;
+}
+
+.yf-program-details > p {
+  min-height: 70px;
+  margin: 0;
+  color: #847b75;
+  font-size: 0.79rem;
+  line-height: 1.8;
+}
+
+.yf-program-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+  padding-top: 23px;
+  margin-top: 23px;
+  border-top: 1px solid #e5e0da;
+}
+
+.yf-program-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #655d59;
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.yf-program-meta svg {
+  color: #db7855;
+}
+
+/* HOME — IMPACT SECTION */
+
+.yf-impact {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  min-height: 740px;
+  background: #171719;
+  color: white;
+}
+
+.yf-impact-image {
+  min-height: 630px;
+  overflow: hidden;
+}
+
+.yf-impact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(35%) contrast(1.1);
+}
+
+.yf-impact-copy {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+  padding: clamp(40px, 6vw, 95px);
+}
+
+.yf-impact-copy::after {
+  content: "FORM";
+  position: absolute;
+  right: -10%;
+  bottom: -9%;
+  color: #ffffff06;
+  font: 900 18rem / 1
+    "Barlow Condensed", Impact, sans-serif;
+  pointer-events: none;
+}
+
+.yf-impact-copy h2 {
+  position: relative;
+  z-index: 1;
+  margin: 28px 0;
+  font: 800 clamp(5.2rem, 8vw, 10rem) / 0.79
+    "Barlow Condensed", Impact, sans-serif;
+}
+
+.yf-impact-copy h2 em {
+  color: var(--yf-orange);
+}
+
+.yf-impact-copy p {
+  max-width: 440px;
+  margin: 0 0 27px;
+  color: #b5aaa4;
+  font-size: 0.85rem;
+  line-height: 1.9;
+}
+
+.yf-impact-tag {
+  margin-top: 65px;
+  color: #86807a;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+/* HOME — MEMBERSHIP FEATURE */
+
+.yf-home-pricing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: clamp(35px, 6vw, 80px);
+  background:
+    radial-gradient(
+      ellipse at 79% 22%,
+      #623e32,
+      transparent 55%
+    ),
+    #171719;
+  color: white;
+}
+
+.yf-home-pricing > div:first-child {
+  max-width: 670px;
+}
+
+.yf-home-pricing h3 {
+  margin: 24px 0;
+  font: 900 clamp(5.3rem, 10vw, 11rem) / 0.8
+    "Barlow Condensed", Impact, sans-serif;
+}
+
+.yf-home-pricing p {
+  max-width: 400px;
+  margin: 0 0 25px;
+  color: #b2a6a0;
+  font-size: 0.79rem;
+  line-height: 1.85;
+}
+
+.yf-home-pricing-value {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.yf-home-pricing-value span,
+.yf-home-pricing-value small {
+  color: #d4a28e;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.yf-home-pricing-value strong {
+  font: 800 clamp(4rem, 7vw, 8rem) / 0.85
+    "Barlow Condensed", Impact, sans-serif;
+  color: var(--yf-orange);
+  white-space: nowrap;
+}
+
+/* HOME — COACHES */
+
+.yf-coach-preview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.yf-coach-preview article {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 30px;
+  background: #252426;
+  border: 1px solid #ffffff19;
+}
+
+.yf-coach-preview-number {
+  color: var(--yf-orange);
+  font-size: 0.67rem;
+  font-weight: 800;
+}
+
+.yf-coach-monogram {
+  display: grid;
+  place-items: center;
+  height: 205px;
+  background:
+    radial-gradient(circle, #ff6b4527, transparent 55%),
+    #302c2b;
+  color: #f38b68;
+  font: 900 9rem / 1
+    "Barlow Condensed", Impact, sans-serif;
+}
+
+.yf-coach-preview article > div:nth-last-child(2) small {
+  color: var(--yf-orange);
+  font-size: 0.65rem;
+  font-weight: 800;
+}
+
+.yf-coach-preview h3 {
+  margin: 10px 0 0;
+  font: 800 3rem / 0.9
+    "Barlow Condensed", Impact, sans-serif;
+}
+
+.yf-coach-preview article > svg {
+  align-self: flex-end;
+  color: var(--yf-orange);
+}
+
+.yf-coach-disclaimer {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-top: 25px;
+  color: #a9a19b;
+  font-size: 0.72rem;
+}
+
+.yf-coach-disclaimer svg {
+  color: var(--yf-orange);
+}
+
+/* INNER-PAGE HERO */
+
+.yf-page-hero {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(85px, 10vw, 145px);
+  background:
+    radial-gradient(
+      ellipse at 94% 10%,
+      #4b3028,
+      transparent 52%
+    ),
+    #171719;
+  color: white;
+}
+
+.yf-page-hero::after {
+  content: "";
+  position: absolute;
+  right: -10%;
+  bottom: -80%;
+  width: 45%;
+  aspect-ratio: 1;
+  border: 1px solid #ff6b453a;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.yf-page-hero h1 {
+  max-width: 1240px;
+  margin: 27px 0;
+  font: 900 clamp(6.2rem, 11vw, 13rem) / 0.78
+    "Barlow Condensed", Impact, sans-serif;
+  letter-spacing: -0.045em;
+}
+
+.yf-page-hero h1 em {
+  color: var(--yf-orange);
+  font-weight: 500;
+}
+
+.yf-page-hero p {
+  max-width: 710px;
+  margin: 0;
+  color: #bdb3ae;
+  font-size: 0.87rem;
+  line-height: 1.95;
+}
+
+.yf-page-hero-decor {
+  position: absolute;
+  right: 3%;
+  bottom: 35px;
+  color: #ffffff38;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+/* PROGRAM FILTERS AND DETAILS */
+
+.yf-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 20px;
+}
+
+.yf-filter-bar button {
+  min-height: 43px;
+  padding: 11px 18px;
+  border: 1px solid #d8d1cb;
+  background: transparent;
+  color: #6d645e;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.yf-filter-bar button.is-active {
+  border-color: var(--yf-black);
+  background: var(--yf-black);
+  color: white;
+}
+
+.yf-result-count {
+  margin-bottom: 23px;
+  color: #93877e;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.yf-program-accordion {
+  border-top: 1px solid #cfc5bc;
+}
+
+.yf-program-accordion details {
+  border-bottom: 1px solid #cfc5bc;
+}
+
+.yf-program-accordion summary {
+  display: grid;
+  grid-template-columns: 60px minmax(0, 1fr) 140px 30px;
+  align-items: center;
+  gap: 20px;
+  min-height: 110px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.yf-program-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.yf-program-accordion summary > span:first-child {
+  color: #cf785a;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.yf-program-accordion summary strong {
+  font: 800 clamp(2.2rem, 4vw, 4.3rem) / 0.9
+    "Barlow Condensed", Impact, sans-serif;
+}
+
+.yf-program-accordion summary > span:nth-child(3) {
+  color: #82756b;
+  font-size: 0.75rem;
+}
+
+.yf-program-accordion summary svg {
+  transition: transform 0.25s ease;
+}
+
+.yf-program-accordion details[open] summary svg {
+  transform: rotate(90deg);
+}
+
+.yf-accordion-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  padding: 5px 0 33px 80px;
+}
+
+.yf-accordion-content > div:first-child p {
+  max-width: 540px;
+  color: #786e67;
+  font-size: 0.82rem;
+  line-height: 1.9;
+}
+
+.yf-program-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.yf-program-tags span {
+  padding: 10px 13px;
+  background: #ded5cd;
+  font-size: 0.67rem;
+  font-weight: 800;
+}
+
+.yf-accordion-content > div:last-child > p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #756d66;
+  font-size: 0.79rem;
+}
+
+.yf-accordion-content svg {
+  color: #d06f50;
+}
+
+.yf-accordion-content .yf-text-link {
+  margin-top: 16px;
+}
+
+/* MEMBERSHIPS */
+
+.yf-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.yf-price-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 650px;
+  padding: clamp(24px, 3vw, 40px);
+  background: var(--yf-white);
+  border: 1px solid #ded9d2;
+}
+
+.yf-price-card.is-featured {
+  background: #1d1b1b;
+  border-color: #1d1b1b;
+  color: white;
+}
+
+.yf-price-popular {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 11px 15px;
+  background: var(--yf-orange);
+  color: #1d1b1b;
+  font-size: 0.6rem;
+  font-weight: 900;
+}
+
+.yf-price-card-top h3 {
+  margin: 30px 0 15px;
+  font: 900 clamp(3.8rem, 5vw, 6rem) / 0.86
+    "Barlow Condensed", Impact, sans-serif;
+}
+
+.yf-price-card-top p {
+  min-height: 72px;
+  margin: 0;
+  color: #7e746c;
+  font-size: 0.78rem;
+  line-height: 1.8;
+}
+
+.yf-price-card.is-featured .yf-price-card-top p {
+  color: #aaa09a;
+}
+
+.yf-price-amount {
+  display: grid;
+  gap: 9px;
+  padding: 30px 0;
+  margin: 27px 0;
+  border-block: 1px solid #dcd5cd;
+}
+
+.yf-price-card.is-featured .yf-price-amount {
+  border-color: #ffffff26;
+}
+
+.yf-price-amount strong {
+  font: 900 clamp(3.9rem, 5vw, 6.2rem) / 0.85
+    "Barlow Condensed", Impact, sans-serif;
+  letter-spacing: -0.03em;
+}
+
+.yf-price-card.is-featured .yf-price-amount strong {
+  color: var(--yf-orange);
+}
+
+.yf-price-amount span {
+  color: #9b857a;
+  font-size: 0.62rem;
+  font-weight: 800;
+}
+
+.yf-price-benefits {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  flex: 1;
+  margin-bottom: 30px;
+}
+
+.yf-price-benefits span {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  color: #776c64;
+  font-size: 0.78rem;
+  line-height: 1.7;
+}
+
+.yf-price-card.is-featured .yf-price-benefits span {
+  color: #c0b4ad;
+}
+
+.yf-price-benefits svg {
+  flex: none;
+  color: #e27b59;
+}
+
+.yf-price-card > .yf-button {
+  width: 100%;
+}
+
+.yf-inline-success,
+.yf-success-panel {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  flex-wrap: wrap;
+  margin-top: 23px;
+  padding: 19px 22px;
+  border: 1px solid #c6d9c3;
+  background: #e8f3e5;
+  color: #456c4c;
+  font-size: 0.77rem;
+  line-height: 1.7;
+}
+
+.yf-inline-success > a,
+.yf-success-panel > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-left: auto;
+  font-weight: 800;
+}
+
+/* COACHES PAGE */
+
+.yf-coach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.yf-coach-card {
+  min-width: 0;
+  background: #fffefa;
+}
+
+.yf-coach-card-visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 400px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 40%, #754534, transparent 60%),
+    #242123;
+}
+
+.yf-coach-card-visual > span {
+  position: absolute;
+  left: 23px;
+  top: 23px;
+  color: #eab59d;
+  font-size: 0.66rem;
+  font-weight: 800;
+}
+
+.yf-coach-card-visual > strong {
+  color: var(--yf-orange);
+  font: 900 clamp(8rem, 15vw, 14rem) / 1
+    "Barlow Condensed", Impact, sans-serif;
+  opacity: 0.82;
+}
+
+.yf-coach-card-visual > svg {
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  color: #ffffff54;
+}
+
+.yf-coach-card-info {
+  padding: 30px;
+}
+
+.yf-coach-card-info h3 {
+  margin: 22px 0 12px;
+  font: 900 4rem / 0.88
+    "Barlow Condensed", Impact, sans-serif;
+}
+
+.yf-coach-card-info > strong {
+  font-size: 0.81rem;
+}
+
+.yf-coach-card-info p {
+  margin: 17px 0 0;
+  color: #887d76;
+  font-size: 0.78rem;
+  line-height: 1.9;
+}
+
+.yf-values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.yf-values-grid article {
+  padding: 35px;
+  background: #f6f3ee;
+}
+
+.yf-values-grid svg {
+  color: #d77351;
+}
+
+.yf-values-grid h3 {
+  margin: 24px 0 12px;
+  font: 900 3.5rem / 0.9
+    "Barlow Condensed", Impact, sans-serif;
+}
+
+.yf-values-grid p {
+  color: #847a73;
+  font-size: 0.8rem;
+  line-height: 1.8;
+}
+
+/* ABOUT PAGE */
+
+.yf-about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(40px, 7vw, 115px);
+}
+
+.yf-about-visual {
+  min-height: 620px;
+  overflow: hidden;
+}
+
+.yf-about-visual img {
+  width: 100%;
+  height: 100%;
+  min-height: 620px;
+  object-fit: cover;
+}
+
+.yf-about-copy h2 {
+  margin: 25px 0;
+  font: 900 clamp(5rem, 7vw, 9rem) / 0.8
+    "Barlow Condensed", Impact, sans-serif;
+}
+
+.yf-about-copy h2 em {
+  color: #dd7656;
+}
+
+.yf-about-copy p {
+  color: #84786f;
+  font-size: 0.84rem;
+  line-height: 1.95;
+}
+
+.yf-about-copy .yf-button {
+  margin-top: 20px;
+}
+
+.yf-about-ending h2 {
+  margin: 28px 0;
+  font: 900 clamp(4.6rem, 8vw, 9rem) / 0.82
+    "Barlow Condensed", Impact, sans-serif;
+}
+
+.yf-about-ending h2 em {
+  color: var(--yf-orange);
+}
+
+.yf-about-ending > p {
+  color: #b4a59c;
+  font-size: 0.8rem;
+}
+
+/* SCHEDULE — DATE NAV */
+
+.yf-date-scroller {
+  display: flex;
+  gap: 9px;
+  overflow-x: auto;
+  padding: 4px 2px 18px;
+  margin-bottom: 46px;
+  scrollbar-width: thin;
+  scrollbar-color: #d87b58 transparent;
+}
+
+.yf-date-chip {
+  display: flex;
+  flex: 0 0 77px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 111px;
+  padding: 12px 9px;
+  border: 1px solid #ded7d0;
+  background: #fffefa;
+  color: #514b47;
+}
+
+.yf-date-chip small,
+.yf-date-chip span {
+  font-size: 0.67rem;
+  font-weight: 800;
+}
+
+.yf-date-chip strong {
+  font: 900 2.6rem / 0.8
+    "Barlow Condensed", Impact, sans-serif;
+}
+
+.yf-date-chip.is-active {
+  background: var(--yf-orange);
+  border-color: var(--yf-orange);
+  color: #171719;
+}
+
+.yf-schedule-toolbar {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+.yf-schedule-toolbar h2 {
+  margin: 15px 0 8px;
+  font: 800 clamp(3rem, 4.5vw, 5rem) / 0.9
+    "Barlow Condensed", Impact, sans-serif;
+  text-transform: uppercase;
+}
+
+.yf-schedule-toolbar p {
+  color: #8e8179;
+  font-size: 0.74rem;
+}
+
+.yf-select-field {
+  display: grid;
+  gap: 10px;
+  width: min(320px, 100%);
+}
+
+.yf-select-field > span,
+.yf-form-field > span {
+  color: #a16852;
+  font-size: 0.67rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.yf-select-field select,
+.yf-form-field input {
+  width: 100%;
+  min-height: 52px;
+  padding: 13px 15px;
+  border: 1px solid #d9d1c9;
+  background: #fffefa;
+  color: #242021;
+  font-size: 0.81rem;
+}
+
+.yf-schedule-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(330px, 0.7fr);
+  align-items: start;
+  gap: 23px;
+}
+
+.yf-session-list {
+  display: grid;
+  gap: 13px;
+  min-width: 0;
+}
+
+.yf-session-card {
+  display: grid;
+  grid-template-columns: 145px minmax(0, 1fr);
+  gap: 0;
+  min-width: 0;
+  background: #fffefa;
+  border: 1px solid #e0d8d1;
+}
+
+.yf-session-card.is-selected {
+  border-color: var(--yf-orange);
+  box-shadow: 0 0 0 1px var(--yf-orange);
+}
+
+.yf-session-time {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 11px;
+  padding: 23px;
+  background: #242123;
+  color: white;
+}
+
+.yf-session-time > span,
+.yf-session-time small {
+  color: #cda18e;
+  font-size: 0.59rem;
+  font-weight: 800;
+}
+
+.yf-session-time strong {
+  font: 800 2.8rem / 0.86
+    "Barlow Condensed", Impact, sans-serif;
+  white-space: nowrap;
+}
+
+.yf-session-info {
+  padding: 25px 25px 8px;
+  min-width: 0;
+}
+
+.yf-session-info h3 {
+  margin: 13px 0;
+  font: 800 clamp(2.5rem, 3vw, 3.8rem) / 0.88
+    "Barlow Condensed", Impact, sans-serif;
+}
+
+.yf-session-info > p {
+  margin: 0 0 15px;
+  color: #82786f;
+  font-size: 0.76rem;
+  line-height: 1.75;
+}
+
+.yf-session-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px 19px;
+}
+
+.yf-session-meta span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #827971;
+  font-size: 0.68rem;
+}
+
+.yf-session-meta svg {
+  color: #d57c58;
+}
+
+.yf-session-action {
+  grid-column: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0 25px 24px;
+}
+
+.yf-session-action small {
+  display: block;
+  color: #9c8980;
+  font-size: 0.58rem;
+  font-weight: 800;
+}
+
+.yf-session-action strong {
+  display: block;
+  margin-top: 7px;
+  font-size: 0.7rem;
+}
+
+.yf-session-action .yf-button {
+  min-height: 43px;
+  padding: 10px 13px;
+  font-size: 0.69rem;
+}
+
+.yf-schedule-sidebar {
+  position: sticky;
+  top: 112px;
+}
+
+.yf-booking-panel {
+  background: #222022;
+  color: white;
+}
+
+.yf-booking-panel-header {
+  position: relative;
+  padding: 33px 32px 27px;
+  border-bottom: 1px solid #ffffff21;
+}
+
+.yf-booking-panel-header h2 {
+  margin: 17px 0 0;
+  font: 800 4.7rem / 0.8
+    "Barlow Condensed", Impact, sans-serif;
+}
+
+.yf-booking-panel-header h2 em {
+  color: var(--yf-orange);
+}
+
+.yf-booking-panel-header > button {
+  position: absolute;
+  top: 21px;
+  right: 20px;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #ffffff42;
+  background: transparent;
+  color: white;
+}
+
+.yf-booking-placeholder {
+  display: grid;
+  justify-items: start;
+  gap: 15px;
+  padding: 45px 32px;
+}
+
+.yf-booking-placeholder svg {
+  color: var(--yf-orange);
+}
+
+.yf-booking-placeholder h3 {
+  margin: 0;
+  font: 800 2.8rem / 0.9
+    "Barlow Condensed", Impact, sans-serif;
+}
+
+.yf-booking-placeholder p {
+  margin: 0;
+  color: #a99f99;
+  font-size: 0.78rem;
+  line-height: 1.8;
+}
+
+.yf-booking-form {
+  display: grid;
+  gap: 21px;
+  padding: 28px 32px 35px;
+}
+
+.yf-booking-form h3 {
+  margin: 0;
+  font: 800 3.6rem / 0.85
+    "Barlow Condensed", Impact, sans-serif;
+}
+
+.yf-booking-facts {
+  display: grid;
+  gap: 13px;
+  padding: 20px 0;
+  border-block: 1px solid #ffffff28;
+}
+
+.yf-booking-facts > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #c8bcb3;
+  font-size: 0.74rem;
+}
+
+.yf-booking-facts svg {
+  color: var(--yf-orange);
+}
+
+.yf-demo-seat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: #383030;
+}
+
+.yf-demo-seat span {
+  max-width: 150px;
+  color: #d1a08b;
+  font-size: 0.62rem;
+  font-weight: 800;
+  line-height: 1.7;
+}
+
+.yf-demo-seat strong {
+  color: var(--yf-orange);
+  font: 900 4rem / 0.9
+    "Barlow Condensed", Impact, sans-serif;
+}
+
+.yf-form-field {
+  display: grid;
+  gap: 10px;
+}
+
+.yf-form-field input {
+  background: #302c2d;
+  border-color: #ffffff38;
+  color: white;
+}
+
+.yf-form-field input::placeholder {
+  color: #aba09a;
+}
+
+.yf-check-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #b8aba4;
+  font-size: 0.72rem;
+  line-height: 1.75;
+  cursor: pointer;
+}
+
+.yf-check-row input {
+  margin-top: 4px;
+  accent-color: var(--yf-orange);
+}
+
+.yf-booking-form > .yf-button {
+  width: 100%;
+}
+
+.yf-form-error {
+  margin: 0;
+  padding: 12px 15px;
+  background: #492c28;
+  color: #ffc4b2;
+  font-size: 0.73rem;
+  line-height: 1.8;
+}
+
+.yf-booking-disclaimer {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 23px;
+  margin-top: 13px;
+  background: #efe7df;
+}
+
+.yf-booking-disclaimer svg {
+  flex: none;
+  color: #c96a4a;
+}
+
+.yf-booking-disclaimer p {
+  margin: 0;
+  color: #80756e;
+  font-size: 0.74rem;
+  line-height: 1.8;
+}
+
+.yf-schedule-empty {
+  display: grid;
+  justify-items: start;
+  gap: 18px;
+  padding: 45px;
+  background: #efe8e0;
+}
+
+.yf-schedule-empty > svg {
+  color: #d27b57;
+}
+
+.yf-schedule-empty h3 {
+  margin: 0;
+  font: 800 3.7rem / 0.86
+    "Barlow Condensed", Impact, sans-serif;
+}
+
+.yf-schedule-empty p {
+  color: #837870;
+  font-size: 0.79rem;
+  line-height: 1.8;
+}
+
+/* MY STUDIO DASHBOARD */
+
+.yf-studio-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 27px;
+}
+
+.yf-studio-stats article {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  padding: 28px;
+  background: #fffefa;
+  border: 1px solid #e4ded8;
+}
+
+.yf-studio-stats svg {
+  color: #d46c4a;
+}
+
+.yf-studio-stats strong {
+  font: 900 5rem / 0.8
+    "Barlow Condensed", Impact, sans-serif;
+}
+
+.yf-studio-stats span {
+  color: #84796f;
+  font-size: 0.75rem;
+}
+
+.yf-studio-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.75fr);
+  align-items: start;
+  gap: 22px;
+}
+
+.yf-studio-panel {
+  min-width: 0;
+  padding: clamp(25px, 3.5vw, 42px);
+  background: #fffefa;
+  border: 1px solid #e4ded8;
+}
+
+.yf-studio-heading {
+  margin-bottom: 29px;
+}
+
+.yf-studio-heading h2 {
+  margin: 19px 0;
+  font: 800 5rem / 0.8
+    "Barlow Condensed", Impact, sans-serif;
+}
+
+.yf-studio-heading h2 em {
+  color: #df7755;
+}
+
+.yf-studio-empty {
+  display: grid;
+  justify-items: start;
+  gap: 18px;
+  padding: 32px;
+  background: #f0e9e2;
+}
+
+.yf-studio-empty > svg {
+  color: #d87452;
+}
+
+.yf-studio-empty h3 {
+  margin: 0;
+  font: 800 3rem / 0.9
+    "Barlow Condensed", Impact, sans-serif;
+}
+
+.yf-studio-empty p {
+  margin: 0;
+  color: #827770;
+  font-size: 0.8rem;
+  line-height: 1.8;
+}
+
+.yf-studio-reservations {
+  display: grid;
+  gap: 12px;
+}
+
+.yf-studio-reservation {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 20px;
+  border: 1px solid #e6dfd9;
+  background: #f7f2ed;
+}
+
+.yf-reservation-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 65px;
+  min-height: 77px;
+  flex: none;
+  background: var(--yf-orange);
+  color: #171719;
+}
+
+.yf-reservation-date strong {
+  font: 900 2.9rem / 0.85
+    "Barlow Condensed", Impact, sans-serif;
+}
+
+.yf-reservation-date span {
+  font-size: 0.58rem;
+  font-weight: 800;
+}
+
+.yf-reservation-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.yf-reservation-info h3 {
+  margin: 10px 0;
+  font: 800 2.3rem / 0.9
+    "Barlow Condensed", Impact, sans-serif;
+}
+
+.yf-reservation-info p {
+  margin: 7px 0;
+  color: #857a71;
+  font-size: 0.72rem;
+  line-height: 1.6;
+}
+
+.yf-studio-reservation > button {
+  display: grid;
+  place-items: center;
+  width: 41px;
+  height: 41px;
+  flex: none;
+  background: #fbe5db;
+  border: 1px solid #ebccbb;
+  color: #a25b43;
+}
+
+.yf-inline-message {
+  padding: 14px;
+  background: #e8f0e2;
+  color: #4e7950;
+  font-size: 0.76rem;
+}
+
+.yf-membership-summary {
+  position: sticky;
+  top: 112px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+  padding: clamp(28px, 4vw, 48px);
+  background: #211e20;
+  color: white;
+}
+
+.yf-membership-summary > svg {
+  color: var(--yf-orange);
+}
+
+.yf-membership-summary h2 {
+  margin: 0;
+  font: 900 clamp(4rem, 5.5vw, 6rem) / 0.85
+    "Barlow Condensed", Impact, sans-serif;
+}
+
+.yf-membership-summary h2 em {
+  color: var(--yf-orange);
+}
+
+.yf-membership-summary > p {
+  max-width: 360px;
+  margin: 0;
+  color: #b2a59d;
+  font-size: 0.79rem;
+  line-height: 1.9;
+}
+
+.yf-membership-saved-price {
+  display: grid;
+  gap: 9px;
+  width: 100%;
+  padding: 22px 0;
+  border-block: 1px solid #ffffff26;
+}
+
+.yf-membership-saved-price strong {
+  color: var(--yf-orange);
+  font: 900 5rem / 0.83
+    "Barlow Condensed", Impact, sans-serif;
+}
+
+.yf-membership-saved-price span {
+  color: #af9e96;
+  font-size: 0.63rem;
+  font-weight: 800;
+}
+
+.yf-membership-saved-actions {
+  display: grid;
+  justify-items: start;
+  gap: 16px;
+}
+
+.yf-membership-saved-actions > button {
+  padding: 0 0 7px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #b9aca4;
+  color: #b9aca4;
+  font-size: 0.73rem;
+}
+
+.yf-membership-smallprint {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  width: 100%;
+  margin-top: 18px;
+  padding-top: 20px;
+  border-top: 1px solid #ffffff25;
+  color: #9f928c;
+  font-size: 0.68rem;
+  line-height: 1.8;
+}
+
+.yf-membership-smallprint svg {
+  flex: none;
+  color: var(--yf-orange);
+}
+
+/* FOOTER */
+
+.yf-footer {
+  background: #171719;
+  color: white;
+}
+
+.yf-footer-cta {
+  padding-block: clamp(80px, 9vw, 135px);
+  background:
+    radial-gradient(
+      ellipse at 89% 15%,
+      #5a322b,
+      transparent 54%
+    ),
+    #212021;
+}
+
+.yf-footer-cta h2 {
+  margin: 28px 0 35px;
+  font: 900 clamp(7rem, 15vw, 17rem) / 0.68
+    "Barlow Condensed", Impact, sans-serif;
+  letter-spacing: -0.05em;
+}
+
+.yf-footer-cta h2 em {
+  color: var(--yf-orange);
+}
+
+.yf-footer-cta-bottom {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.yf-footer-cta-bottom p {
+  max-width: 430px;
+  color: #b8aaa2;
+  font-size: 0.84rem;
+  line-height: 1.9;
+}
+
+.yf-footer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) 0.6fr 0.8fr;
+  gap: 80px;
+  padding-block: 75px;
+}
+
+.yf-footer-brand p {
+  max-width: 380px;
+  margin: 24px 0;
+  color: #a89d95;
+  font-size: 0.77rem;
+  line-height: 1.9;
+}
+
+.yf-footer-brand > span {
+  color: var(--yf-orange);
+  font-size: 0.63rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.yf-footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.yf-footer-links > strong {
+  margin-bottom: 7px;
+  color: var(--yf-orange);
+  font-size: 0.64rem;
+  letter-spacing: 0.13em;
+}
+
+.yf-footer-links > a,
+.yf-footer-links > p {
+  margin: 0;
+  color: #b6ada7;
+  font-size: 0.76rem;
+  line-height: 1.8;
+}
+
+.yf-footer-links > a:hover {
+  color: var(--yf-orange);
+}
+
+.yf-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-block: 24px;
+  border-top: 1px solid #ffffff24;
+  color: #8d8580;
+  font-size: 0.67rem;
+}
+
+.yf-footer-bottom a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* LAPTOP AND TABLET */
+
+@media (max-width: 1250px) {
+  .yf-nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    padding: 23px 36px 30px;
+    background: #171719;
+    border-top: 1px solid #ffffff20;
+    box-shadow: 0 25px 40px #00000040;
+  }
+
+  .yf-nav.is-open {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .yf-nav a {
+    display: block;
+    padding: 16px;
+  }
+
+  .yf-nav a.is-active {
+    background: #332624;
+    color: var(--yf-orange);
+  }
+
+  .yf-nav a.is-active::after {
+    display: none;
+  }
+
+  .yf-menu-toggle {
+    display: grid;
+  }
+
+  .yf-schedule-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .yf-schedule-sidebar,
+  .yf-membership-summary {
+    position: static;
+  }
+
+  .yf-booking-panel {
+    max-width: 850px;
+  }
+
+  .yf-method-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .yf-coach-grid {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .yf-program-grid,
+  .yf-pricing-grid,
+  .yf-coach-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .yf-method-grid,
+  .yf-impact,
+  .yf-about-grid,
+  .yf-studio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .yf-method-lead {
+    min-height: 520px;
+  }
+
+  .yf-method-points {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .yf-method-points article {
+    padding: 27px;
+    border-top: 1px solid var(--yf-line);
+  }
+
+  .yf-method-points h3 {
+    font-size: 2.1rem;
+  }
+
+  .yf-impact-image {
+    min-height: 420px;
+    max-height: 520px;
+  }
+
+  .yf-impact-copy {
+    min-height: 520px;
+  }
+
+  .yf-about-visual,
+  .yf-about-visual img {
+    min-height: 430px;
+    max-height: 550px;
+  }
+
+  .yf-footer-grid {
+    gap: 40px;
+  }
+
+  .yf-coach-preview {
+    gap: 10px;
+  }
+
+  .yf-coach-preview article {
+    padding: 20px;
+  }
+}
+
+/* PHONE AND SMALL TABLET */
+
+@media (max-width: 700px) {
+  .yf-topline {
+    justify-content: center;
+    padding: 9px 16px;
+    font-size: 0.53rem;
+    text-align: center;
+  }
+
+  .yf-topline span:last-child {
+    display: none;
+  }
+
+  .yf-header-inner {
+    min-height: 73px;
+  }
+
+  .yf-logo > span:last-child {
+    font-size: 1.6rem;
+  }
+
+  .yf-logo-mark {
+    width: 38px;
+    height: 38px;
+  }
+
+  .yf-header-cta {
+    display: none;
+  }
+
+  .yf-nav {
+    padding: 16px 18px 25px;
+  }
+
+  .yf-hero {
+    min-height: 690px;
+  }
+
+  .yf-hero-content {
+    min-height: 660px;
+    padding-block: 80px;
+  }
+
+  .yf-hero-image img {
+    object-position: 64% center;
+  }
+
+  .yf-hero-shade {
+    background:
+      linear-gradient(
+        90deg,
+        #171719ee,
+        #171719a6 80%,
+        #17171980
+      ),
+      linear-gradient(
+        0deg,
+        #171719,
+        transparent 60%
+      );
+  }
+
+  .yf-hero h1 {
+    font-size: clamp(6.7rem, 20vw, 10.5rem);
+    margin-block: 35px 30px;
+  }
+
+  .yf-hero-content > p {
+    font-size: 0.82rem;
+  }
+
+  .yf-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: min(100%, 340px);
+  }
+
+  .yf-hero-signature {
+    flex-wrap: wrap;
+    gap: 10px 23px;
+    margin-top: 45px;
+  }
+
+  .yf-hero-edge {
+    padding: 16px 18px;
+  }
+
+  .yf-hero-edge span:nth-child(2) {
+    display: none;
+  }
+
+  .yf-method-points,
+  .yf-program-grid,
+  .yf-pricing-grid,
+  .yf-coach-grid,
+  .yf-coach-preview,
+  .yf-values-grid,
+  .yf-studio-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .yf-method-lead {
+    min-height: 460px;
+  }
+
+  .yf-method-lead h3 {
+    font-size: 5.8rem;
+  }
+
+  .yf-method-points article {
+    padding: 28px 8px;
+  }
+
+  .yf-program-photo {
+    height: 360px;
+  }
+
+  .yf-program-details h3 {
+    font-size: 3.8rem;
+  }
+
+  .yf-program-details > p {
+    min-height: auto;
+  }
+
+  .yf-impact-copy {
+    padding: 55px 23px;
+    min-height: 520px;
+  }
+
+  .yf-impact-copy h2 {
+    font-size: clamp(5.5rem, 14vw, 8rem);
+  }
+
+  .yf-home-pricing,
+  .yf-footer-cta-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .yf-home-pricing h3 {
+    font-size: 7rem;
+  }
+
+  .yf-home-pricing-value {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .yf-home-pricing-value strong {
+    font-size: 6rem;
+  }
+
+  .yf-coach-monogram {
+    height: 180px;
+    font-size: 8rem;
+  }
+
+  .yf-page-hero {
+    padding-block: 85px;
+  }
+
+  .yf-page-hero h1 {
+    font-size: clamp(5.3rem, 15vw, 8rem);
+  }
+
+  .yf-page-hero-decor {
+    display: none;
+  }
+
+  .yf-program-accordion summary {
+    grid-template-columns: 32px minmax(0, 1fr) 26px;
+    gap: 12px;
+    min-height: 90px;
+  }
+
+  .yf-program-accordion summary strong {
+    font-size: 2.3rem;
+  }
+
+  .yf-program-accordion summary > span:nth-child(3) {
+    display: none;
+  }
+
+  .yf-accordion-content {
+    grid-template-columns: 1fr;
+    gap: 19px;
+    padding: 4px 0 28px;
+  }
+
+  .yf-price-card {
+    min-height: auto;
+    padding: 30px;
+  }
+
+  .yf-price-card-top p {
+    min-height: auto;
+  }
+
+  .yf-coach-card-visual {
+    min-height: 310px;
+  }
+
+  .yf-about-copy h2 {
+    font-size: 5.9rem;
+  }
+
+  .yf-about-ending h2 {
+    font-size: 5rem;
+  }
+
+  .yf-schedule-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .yf-select-field {
+    width: 100%;
+  }
+
+  .yf-session-card {
+    grid-template-columns: 1fr;
+  }
+
+  .yf-session-time {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 17px;
+  }
+
+  .yf-session-time strong {
+    font-size: 2.4rem;
+  }
+
+  .yf-session-info {
+    padding: 23px 20px;
+  }
+
+  .yf-session-action {
+    grid-column: 1;
+    padding: 0 20px 23px;
+  }
+
+  .yf-booking-panel-header h2 {
+    font-size: 4.5rem;
+  }
+
+  .yf-studio-stats {
+    gap: 10px;
+  }
+
+  .yf-studio-stats strong {
+    font-size: 4.2rem;
+  }
+
+  .yf-studio-heading h2 {
+    font-size: 4.3rem;
+  }
+
+  .yf-studio-reservation {
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .yf-reservation-date {
+    width: 53px;
+    min-height: 70px;
+  }
+
+  .yf-reservation-info h3 {
+    font-size: 2rem;
+  }
+
+  .yf-membership-summary {
+    padding: 30px;
+  }
+
+  .yf-footer-cta h2 {
+    font-size: clamp(7rem, 19vw, 10rem);
+  }
+
+  .yf-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    padding-block: 60px;
+  }
+
+  .yf-footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 13px;
+  }
+}
+
+/* COMPACT PHONES */
+
+@media (max-width: 380px) {
+  .yf-logo > span:last-child {
+    font-size: 1.45rem;
+  }
+
+  .yf-hero h1 {
+    font-size: 6.4rem;
+  }
+
+  .yf-hero-flag {
+    font-size: 0.52rem;
+  }
+
+  .yf-method-lead h3 {
+    font-size: 5rem;
+  }
+
+  .yf-page-hero h1 {
+    font-size: 4.8rem;
+  }
+
+  .yf-program-photo {
+    height: 290px;
+  }
+
+  .yf-price-amount strong,
+  .yf-membership-saved-price strong {
+    font-size: 4.3rem;
+  }
+
+  .yf-booking-panel-header,
+  .yf-booking-form {
+    padding-inline: 20px;
+  }
+
+  .yf-booking-panel-header h2 {
+    font-size: 3.9rem;
+  }
+
+  .yf-footer-cta h2 {
+    font-size: 6rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .yf-program-card:hover,
+  .yf-method-lead:hover img,
+  .yf-program-card:hover .yf-program-photo img {
+    transform: none;
+  }
+}

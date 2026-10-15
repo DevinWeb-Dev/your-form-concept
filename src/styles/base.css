@@ -1,0 +1,398 @@
+/* ========================================
+   YOUR FORM. — BASE DESIGN SYSTEM
+   ======================================== */
+
+:root {
+  font-family: "DM Sans", Arial, sans-serif;
+  color: #202020;
+  background: #f6f3ee;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  --yf-black: #171719;
+  --yf-black-soft: #242425;
+  --yf-orange: #ff6b45;
+  --yf-orange-light: #ff9874;
+  --yf-cream: #f6f3ee;
+  --yf-stone: #ebe6df;
+  --yf-white: #fffefa;
+  --yf-muted: #7b7773;
+  --yf-line: #dedad4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 92px;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--yf-orange);
+  outline-offset: 4px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+::selection {
+  background: var(--yf-orange);
+  color: #111;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.yf-app {
+  min-height: 100vh;
+  overflow-x: clip;
+}
+
+.yf-container {
+  width: min(100% - 72px, 1480px);
+  margin-inline: auto;
+}
+
+.yf-section {
+  padding-block: clamp(85px, 9vw, 150px);
+}
+
+.yf-section-cream {
+  background: var(--yf-stone);
+}
+
+.yf-section-dark {
+  background: var(--yf-black);
+  color: var(--yf-white);
+}
+
+.yf-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #9a6754;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.yf-eyebrow::before {
+  content: "";
+  width: 23px;
+  height: 2px;
+  background: currentColor;
+}
+
+.yf-eyebrow.is-orange {
+  color: var(--yf-orange);
+}
+
+.yf-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 35px;
+
+  margin-bottom: 45px;
+}
+
+.yf-section-heading h2 {
+  margin: 22px 0 0;
+
+  font-family:
+    "Barlow Condensed", Impact, sans-serif;
+  font-size: clamp(4.4rem, 7vw, 8.7rem);
+  font-weight: 800;
+  line-height: 0.83;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+}
+
+.yf-section-heading h2 em {
+  color: var(--yf-orange);
+  font-weight: 500;
+}
+
+.yf-section-aside {
+  display: grid;
+  justify-items: start;
+  gap: 23px;
+  width: min(350px, 100%);
+}
+
+.yf-section-aside > p {
+  margin: 0;
+  color: var(--yf-muted);
+  font-size: 0.83rem;
+  line-height: 1.95;
+}
+
+.yf-section-dark .yf-section-aside > p {
+  color: #aaa39d;
+}
+
+.yf-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 8px;
+
+  border-bottom: 1px solid currentColor;
+  font-size: 0.77rem;
+  font-weight: 800;
+  transition: gap 0.25s ease;
+}
+
+.yf-text-link:hover {
+  gap: 20px;
+}
+
+.yf-text-link.is-light {
+  color: white;
+}
+
+.yf-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  min-height: 55px;
+  padding: 15px 22px;
+
+  border: 1px solid transparent;
+  border-radius: 0;
+
+  font-size: 0.78rem;
+  font-weight: 800;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.yf-button:not(:disabled):hover {
+  transform: translateY(-3px);
+}
+
+.yf-button.is-orange {
+  color: #171719;
+  background: var(--yf-orange);
+}
+
+.yf-button.is-orange:hover {
+  background: var(--yf-orange-light);
+  box-shadow: 0 13px 30px #ff6b453b;
+}
+
+.yf-button.is-dark {
+  color: white;
+  background: var(--yf-black);
+}
+
+.yf-button.is-dark:hover {
+  background: #3a3a3c;
+}
+
+.yf-button.is-outline-light {
+  color: #fff;
+  border-color: #ffffff75;
+  background: #ffffff10;
+}
+
+.yf-button.is-outline-light:hover {
+  background: #ffffff28;
+}
+
+.yf-button.is-saved {
+  color: #5c7761;
+  border-color: #d2e0d2;
+  background: #e7f0e5;
+  transform: none;
+}
+
+.yf-demo-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+
+  margin-top: 30px;
+  padding: 22px;
+
+  background: #ede7df;
+  border-left: 3px solid var(--yf-orange);
+}
+
+.yf-demo-note svg {
+  flex: none;
+  color: #cf6948;
+}
+
+.yf-demo-note p {
+  margin: 0;
+  color: #817670;
+  font-size: 0.77rem;
+  line-height: 1.85;
+}
+
+.yf-demo-note.is-dark {
+  background: #2d2b2b;
+}
+
+.yf-demo-note.is-dark p {
+  color: #bab1aa;
+}
+
+.yf-skip-link {
+  position: fixed;
+  z-index: 9999;
+  top: -100px;
+  left: 12px;
+
+  padding: 14px 20px;
+  background: var(--yf-orange);
+  color: #171719;
+  font-weight: 800;
+}
+
+.yf-skip-link:focus {
+  top: 12px;
+}
+
+.yf-not-found {
+  display: flex;
+  align-items: center;
+  min-height: 76vh;
+  background: var(--yf-black);
+  color: white;
+}
+
+.yf-not-found h1 {
+  margin: 28px 0;
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: clamp(5rem, 12vw, 12rem);
+  line-height: 0.8;
+}
+
+.yf-not-found h1 em {
+  color: var(--yf-orange);
+}
+
+.yf-not-found p {
+  margin: 0 0 30px;
+  color: #a59d95;
+}
+
+@media (max-width: 700px) {
+  .yf-container {
+    width: min(100% - 36px, 1480px);
+  }
+
+  .yf-section {
+    padding-block: 78px;
+  }
+
+  .yf-section-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 23px;
+  }
+
+  .yf-section-heading h2 {
+    font-size: clamp(4rem, 12vw, 6.5rem);
+  }
+
+  .yf-section-aside {
+    width: 100%;
+  }
+
+  .yf-button {
+    min-height: 50px;
+    padding: 14px 17px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
