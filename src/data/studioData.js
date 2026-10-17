@@ -5,9 +5,9 @@
 
 export const BRAND = {
   name: "YOUR FORM.",
-  tagline: "BUILT DIFFERENT.",
+  tagline: "NO SHORTCUTS. ONLY FORWARD.",
   description:
-    "A premium fitness studio website concept built around movement, confidence, and measurable personal progress.",
+    "A kinetic fitness studio experience built around considered training, strong habits, and movement with intent.",
   attribution:
     "Website Concept Made by: Web Developer Devin Planas",
 };

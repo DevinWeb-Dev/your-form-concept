@@ -167,7 +167,6 @@ function downloadSnapshot() {
 export default function DemoSettingsPage() {
   const {
     reservations,
-    membership,
   } = useStudio();
 
   const {

@@ -280,7 +280,8 @@ export default function StaffLayout() {
     ) || ALL_NAV_ITEMS[0];
 
   useEffect(() => {
-    setMenuOpen(false);
+    const frame = requestAnimationFrame(() => setMenuOpen(false));
+    return () => cancelAnimationFrame(frame);
   }, [location.pathname]);
 
   return (

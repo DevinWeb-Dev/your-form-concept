@@ -16,7 +16,6 @@ import {
   CheckCircle2,
   ClipboardCheck,
   Clock3,
-  Dumbbell,
   Info,
   Plus,
   Search,

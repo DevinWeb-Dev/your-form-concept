@@ -90,6 +90,33 @@ export default function ExperienceTools() {
       );
   }, []);
 
+  useEffect(() => {
+    let observer;
+    let frame = window.requestAnimationFrame(() => {
+      const elements = document.querySelectorAll(
+        "[data-yf-reveal], .yf-section-heading, .yf-program-card, .yf-price-card, .yf-coach-card, .yf6-console, .yf6-blueprint, .yf-impact-copy"
+      );
+      const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduced || !("IntersectionObserver" in window)) return;
+      observer = new IntersectionObserver((entries, currentObserver) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("yf6-is-visible");
+            currentObserver.unobserve(entry.target);
+          }
+        }
+      }, { rootMargin: "0px 0px 20px 0px", threshold: 0.08 });
+      elements.forEach(element => {
+        element.classList.add("yf6-will-reveal");
+        observer.observe(element);
+      });
+    });
+    return () => {
+      window.cancelAnimationFrame(frame);
+      observer?.disconnect();
+    };
+  }, [pathname]);
+
   function skipToMain() {
     const main =
       document.querySelector(

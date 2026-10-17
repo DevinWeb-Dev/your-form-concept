@@ -41,13 +41,11 @@ import {
   REPORT_OPTIONS,
   buildStudioAnalytics,
   downloadCsv,
-  fullDate,
   membershipModel,
   money,
   normalizeScenario,
   percent,
   shortDate,
-  shortTime,
 } from "../data/analyticsData.js";
 
 const AnalyticsContext = createContext(null);
@@ -108,17 +106,14 @@ export function AnalyticsLayout() {
 
   const operations = useOperations();
 
-  const reservations =
-    studioContext.reservations || [];
+  const reservations = useMemo(() => studioContext.reservations || [], [studioContext.reservations]);
 
   const membership =
     studioContext.membership || null;
 
-  const classes =
-    operations.classes || [];
+  const classes = useMemo(() => operations.classes || [], [operations.classes]);
 
-  const attendance =
-    operations.attendance || {};
+  const attendance = useMemo(() => operations.attendance || {}, [operations.attendance]);
 
   const [scenario, setScenario] =
     useState(loadScenario);

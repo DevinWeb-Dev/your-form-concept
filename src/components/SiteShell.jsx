@@ -66,11 +66,15 @@ function Logo() {
 export default function SiteShell() {
   const [mobileOpen, setMobileOpen] =
     useState(false);
+  const [scrollProgress, setScrollProgress] =
+    useState(0);
 
   const location = useLocation();
 
   useEffect(() => {
-    setMobileOpen(false);
+    const closeFrame = window.requestAnimationFrame(() => {
+      setMobileOpen(false);
+    });
 
     window.scrollTo({
       top: 0,
@@ -81,6 +85,7 @@ export default function SiteShell() {
       PAGE_TITLES[location.pathname] ||
       "YOUR FORM."
     } | YOUR FORM.`;
+    return () => window.cancelAnimationFrame(closeFrame);
   }, [location.pathname]);
 
   useEffect(() => {
@@ -104,8 +109,28 @@ export default function SiteShell() {
       );
   }, [mobileOpen]);
 
+  useEffect(() => {
+    let frame = 0;
+    const update = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        setScrollProgress(max > 0 ? Math.min(100, Math.max(0, window.scrollY / max * 100)) : 0);
+      });
+    };
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
+  }, [location.pathname]);
+
   return (
-    <div className="yf-app">
+    <div className="yf-app yf6-app">
+      <div className="yf6-scroll-progress" style={{ "--yf6-scroll": `${scrollProgress}%` }} aria-hidden="true" />
       <a
         href="#yf-main"
         className="yf-skip-link"
@@ -115,11 +140,11 @@ export default function SiteShell() {
 
       <div className="yf-topline">
         <span>
-          THE WORK STARTS WITH YOU.
+          ENGINEER YOUR BEST SELF.
         </span>
 
         <span>
-          PREMIUM FITNESS STUDIO CONCEPT
+          NO SHORTCUTS. ONLY FORWARD. / EST. 2026
         </span>
       </div>
 
@@ -237,6 +262,9 @@ export default function SiteShell() {
           </div>
         </div>
 
+        <div className="yf6-footer-statement" aria-hidden="true">
+          <span>WORK.</span><strong>REPEAT.</strong><span>EVOLVE.</span>
+        </div>
         <div className="yf-container yf-footer-grid">
           <div className="yf-footer-brand">
             <Logo />

@@ -1,5 +1,4 @@
 import {
-  useMemo,
   useState,
 } from "react";
 
@@ -15,7 +14,6 @@ import {
   BarChart3,
   BookOpen,
   CalendarCheck2,
-  CalendarDays,
   Check,
   CheckCircle2,
   ClipboardList,
@@ -28,7 +26,6 @@ import {
   ShieldCheck,
   Target,
   Trash2,
-  TrendingUp,
 } from "lucide-react";
 
 import {
@@ -47,7 +44,6 @@ import {
   displayTrainingDate,
   getExercise,
   getFocus,
-  recentDays,
   toDateKey,
 } from "../data/trainingData.js";
 
@@ -1571,7 +1567,6 @@ export function WorkoutJournalPage() {
 
 export function ProgressPage() {
   const {
-    logs,
     plans,
     stats,
     goals,
